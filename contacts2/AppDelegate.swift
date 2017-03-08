@@ -15,7 +15,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        
+        tp2()
+        
         return true
     }
 
@@ -41,6 +43,55 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
 
+    func tp2() {
+        
+        // Print Hello World
+        print("Hello World!")
+        
+        // Utiliser des variables
+        let nom = "Chappaz"
+        let prenoms = ["Matthieu","Nicolas","Yvon"]
+        var dateNaissance :Date?;
+        dateNaissance = nil;
+        
+        
+        //1 Initialiser un DateCoponents avec les bonnes valeurs de jour/mois/annee
+        var dateNaissanceComponents = DateComponents();
+        dateNaissanceComponents.day = 21;
+        dateNaissanceComponents.month = 04;
+        dateNaissanceComponents.year = 1990;
+        
+        
+        //2. Récupérer une instance du calendrier courant (sur Calendar)
+        let calendar = Calendar.current;
+        
+        
+        //3. Instancier la date à partir de ses composantes dans le calendrier récupéré
+        dateNaissance = calendar.date(from: dateNaissanceComponents);
+        
+        var moi = Dictionary<String, String>();
+        moi["nom"] = nom;
+        
+        var fullPrenoms = "";
+        for prenom in prenoms {
+            fullPrenoms += (prenom + " ");
+        }
+        moi["prenoms"] = fullPrenoms;
+        
+        let dateFormatter = DateFormatter();
+        dateFormatter.dateStyle = .medium;
+        moi["dateNaissance"] = dateFormatter.string(from: dateNaissance!);
+        
+        
+        print("je suis \(moi)");
+        
+        // Faire la même chose avec une classe
+        let moi2 = Person(prenom: "Matthieu")
+        moi2.nom = "Chappaz"
+        moi2.dateNaissance = dateNaissance!
+        print(moi2)
+
+    }
 
 }
 
