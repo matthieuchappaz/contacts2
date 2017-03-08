@@ -13,6 +13,7 @@
 		DB5AA6F11E702054004CEDFE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DB5AA6F01E702054004CEDFE /* Assets.xcassets */; };
 		DB5AA6F41E702054004CEDFE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DB5AA6F21E702054004CEDFE /* LaunchScreen.storyboard */; };
 		DB5AA6FF1E702054004CEDFE /* contacts2Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB5AA6FE1E702054004CEDFE /* contacts2Tests.swift */; };
+		DB5AA70B1E7028E4004CEDFE /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB5AA70A1E7028E4004CEDFE /* Person.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +37,7 @@
 		DB5AA6FA1E702054004CEDFE /* contacts2Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = contacts2Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DB5AA6FE1E702054004CEDFE /* contacts2Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = contacts2Tests.swift; sourceTree = "<group>"; };
 		DB5AA7001E702054004CEDFE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DB5AA70A1E7028E4004CEDFE /* Person.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +79,7 @@
 		DB5AA6E81E702054004CEDFE /* contacts2 */ = {
 			isa = PBXGroup;
 			children = (
+				DB5AA7091E7028AA004CEDFE /* Model */,
 				DB5AA6E91E702054004CEDFE /* AppDelegate.swift */,
 				DB5AA6EB1E702054004CEDFE /* ViewController.swift */,
 				DB5AA6ED1E702054004CEDFE /* Main.storyboard */,
@@ -94,6 +97,14 @@
 				DB5AA7001E702054004CEDFE /* Info.plist */,
 			);
 			path = contacts2Tests;
+			sourceTree = "<group>";
+		};
+		DB5AA7091E7028AA004CEDFE /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				DB5AA70A1E7028E4004CEDFE /* Person.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -199,6 +210,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DB5AA70B1E7028E4004CEDFE /* Person.swift in Sources */,
 				DB5AA6EC1E702054004CEDFE /* ViewController.swift in Sources */,
 				DB5AA6EA1E702054004CEDFE /* AppDelegate.swift in Sources */,
 			);
